@@ -18,7 +18,10 @@
   
   <script async type="text/javascript">
     var elem = document.getElementById("clientId");
-    console.log(gtag.getAll());
+    ga(function(tracker) {
+      var clientId = tracker.get('clientId');
+      console.log(clientId);
+    });
     
   </script>
   
